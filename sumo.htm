@@ -1,0 +1,54 @@
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sumo Game</title>
+    <style>
+        /* Stili per il campo da sumo */
+        #sumo-field {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            position: relative;
+        }
+        
+        /* Stili per il cerchio al centro */
+        #center-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Stili per i pulsanti dei giocatori */
+        .player-button {
+            display: block;
+            width: 100px;
+            height: 50px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sumo-field">
+        <div id="center-circle"></div>
+        <!-- Pulsante per il Player 1 -->
+        <button id="player1-button" class="player-button">Player 1</button>
+        <!-- Pulsante per il Player 2 -->
+        <button id="player2-button" class="player-button">Player 2</button>
+    </div>
+
+    <script>
+        // Codice JavaScript per gestire il gioco andrebbe qui
+        // Implementa la logica del gioco, il timer, il movimento dell'immagine, ecc.
+    </script>
+</body>
+</html>
+
+
