@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esempio Input HTML</title>
+</head>
+<body>
+
+  <h2>Inserisci il tuo nome:</h2>
+
+  <!-- Input di testo -->
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome">
+
+  <!-- Bottone di invio -->
+  <button onclick="mostraMessaggio()">Mostra Nome</button>
+
+  <!-- Script JavaScript per gestire l'input -->
+  <script>
+    function mostraMessaggio() {
+      // Recupera il valore dall'input
+      var nome = document.getElementById("nome").value;
+
+      // Mostra un alert con il messaggio
+      alert("Ciao, " + nome + "!");
+    }
+  </script>
+
+</body>
+</html>
