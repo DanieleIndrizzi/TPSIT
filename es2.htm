@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esempio Numeri</title>
+</head>
+<body>
+
+  <h2>Inserisci un numero:</h2>
+
+  <!-- Input numerico -->
+  <label for="numero">Numero:</label>
+  <input type="number" id="numero" name="numero" placeholder="Inserisci un numero">
+
+  <!-- Bottone di stampa -->
+  <button onclick="stampaNumeri()">Stampa Numeri</button>
+
+  <!-- Contenitore per i numeri stampati -->
+  <div id="risultato"></div>
+
+  <!-- Script JavaScript per gestire l'input -->
+  <script>
+    function stampaNumeri() {
+      // Recupera il valore dall'input
+      var numeroInserito = document.getElementById("numero").value;
+
+      // Convalida che il valore sia un numero positivo
+      if (numeroInserito > 0) {
+        // Inizializza una stringa per i numeri stampati
+        var numeriStampati = "";
+
+        // Stampa i numeri da 1 al numero inserito
+        for (var i = 1; i <= numeroInserito; i++) {
+          numeriStampati += i + ", ";
+        }
+
+        // Calcola il 10% del numero inserito
+        var dieciPercento = numeroInserito * 0.1;
+
+        // Aggiungi il numero corrispondente al 10% alla stringa
+        numeriStampati += "e il 10% di " + numeroInserito + " è " + dieciPercento;
+
+        // Mostra i numeri nel div risultato
+        document.getElementById("risultato").innerHTML = numeriStampati;
+      } else {
+        alert("Inserisci un numero positivo!");
+      }
+    }
+  </script>
+
+</body>
+</html>
