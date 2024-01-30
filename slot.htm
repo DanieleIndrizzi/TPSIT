@@ -123,8 +123,8 @@
                 result.textContent = 'Try again!';
             }
 
-            scoreDisplay.textContent = `Score: ${totalScore}`;
-            walletDisplay.textContent = `Wallet: ${wallet} coins`;
+            scoreDisplay.textContent = `€: ${totalScore}`;
+            walletDisplay.textContent = `Saldo: ${wallet} coins`;
 
             if (wallet <= 0) {
                 wallet = 1000;
@@ -139,7 +139,7 @@
             } else {
                 result.textContent = 'HAI PERSO TUTTO SEI STIRATO.';
                 wallet = 1000;
-                walletDisplay.textContent = `Wallet: ${wallet} coins`;
+                walletDisplay.textContent = `Saldo: ${wallet} €`;
             }
         }
 
