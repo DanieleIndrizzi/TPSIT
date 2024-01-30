@@ -78,8 +78,76 @@
         <p>by Indrizzi e Masin</p>
         <p id="credits">Icons made by Freepik from www.flaticon.com</p>
     </div>
-    <script>
-        // Il tuo script rimane invariato
+       <script>
+        const symbols = {
+            '🍇': 10,
+            '🍒': 20,
+            '🍋': 30,
+            '🍌': 40,
+            '🍊': 50,
+            '❤⁷': 100
+        };
+
+        const reel1 = document.getElementById('reel1');
+        const reel2 = document.getElementById('reel2');
+        const reel3 = document.getElementById('reel3');
+        const result = document.getElementById('result');
+        const scoreDisplay = document.getElementById('score');
+        const walletDisplay = document.getElementById('wallet');
+        let totalScore = 0;
+        let wallet = 1000;
+
+        function getRandomReelSymbol() {
+            const symbolsArray = Object.keys(symbols);
+            const randomIndex = Math.floor(Math.random() * symbolsArray.length);
+            return symbolsArray[randomIndex];
+        }
+
+        function spinReels() {
+            reel1.textContent = getRandomReelSymbol();
+            reel2.textContent = getRandomReelSymbol();
+            reel3.textContent = getRandomReelSymbol();
+        }
+
+        function calculateScore() {
+            const reel1Symbol = reel1.textContent;
+            const reel2Symbol = reel2.textContent;
+            const reel3Symbol = reel3.textContent;
+
+            if (reel1Symbol === reel2Symbol && reel2Symbol === reel3Symbol) {
+                const symbolValue = symbols[reel1Symbol];
+                totalScore += symbolValue;
+                wallet += symbolValue;
+                result.textContent = 'Congratulations! You won!';
+            } else {
+                result.textContent = 'Try again!';
+            }
+
+            scoreDisplay.textContent = `Score: ${totalScore}`;
+            walletDisplay.textContent = `Wallet: ${wallet} coins`;
+
+            if (wallet <= 0) {
+                wallet = 1000;
+            }
+        }
+
+        function repeatSimulation() {
+            if (wallet >= 10) {
+                spinReels();
+                calculateScore();
+                wallet -= 10;
+            } else {
+                result.textContent = 'HAI PERSO TUTTO SEI STIRATO.';
+                wallet = 1000;
+                walletDisplay.textContent = `Wallet: ${wallet} coins`;
+            }
+        }
+
+        // Initialize reels with random symbols
+        spinReels();
+        spinReels();
+        spinReels();
     </script>
+  
 </body>
 </html>
