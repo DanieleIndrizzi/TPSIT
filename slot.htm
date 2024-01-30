@@ -118,13 +118,13 @@
                 const symbolValue = symbols[reel1Symbol];
                 totalScore += symbolValue;
                 wallet += symbolValue;
-                result.textContent = 'Congratulations! You won!';
+                result.textContent = 'CASSAAAA!';
             } else {
-                result.textContent = 'Try again!';
+                result.textContent = 'RIPROVA!';
             }
 
             scoreDisplay.textContent = `€: ${totalScore}`;
-            walletDisplay.textContent = `Saldo: ${wallet} coins`;
+            walletDisplay.textContent = `Saldo: ${wallet} €`;
 
             if (wallet <= 0) {
                 wallet = 1000;
