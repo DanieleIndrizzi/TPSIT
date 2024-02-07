@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto Conversion</title>
+</head>
+<body>
+    <h1>convertitore da decimi in trentesimi</h1>
+    <button onclick="calculateMinAndConvert()">converti e trova il minimo</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateMinAndConvert() {
+            const votes = [];
+            let minVote = 10; // Initialize minimum vote as 10 (max decimi value)
+
+            // Get 5 votes from user input
+            for (let i = 0; i < 5; i++) {
+                const vote = prompt(`Enter vote number ${i + 1}:`);
+                if (vote < 0 || vote > 10) {
+                    alert('Invalid input. Please enter a value between 0 and 10.');
+                    i--;
+                    continue;
+                }
+                votes.push(+vote);
+                if (+vote < minVote) {
+                    minVote = +vote;
+                }
+            }
+
+            // Convert decimi to trentesimi
+            const trentesimiVotes = votes.map(vote => Math.round(vote / 10 * 30));
+
+            // Display the result
+            document.getElementById('result').innerHTML = `
+                Minimum vote: ${minVote} (in decimi) <br>
+                Converted votes in trentesimi: ${trentesimiVotes.join(', ')}
+            `;
+        }
+    </script>
+</body>
+</html>
