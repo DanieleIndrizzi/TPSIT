@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negozio Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .product {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product h2 {
+            margin-top: 0;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .search-bar input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .payment-options {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .payment-options img {
+            max-width: 100px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Il Nostro Negozio Online</h1>
+    </header>
+    <nav>
+        <a href="#prodotti">Prodotti</a>
+        <a href="#metodi-pagamento">Metodi di Pagamento</a>
+    </nav>
+    <div id="prodotti" class="container">
+        <div class="search-bar">
+            <form action="/search" method="get">
+                <input type="text" name="query" placeholder="Cerca prodotti...">
+                <input type="submit" value="Cerca">
+            </form>
+        </div>
+        <div class="product">
+            <img src="immagine1.jpg" alt="Prodotto 1">
+            <h2>Prodotto 1</h2>
+            <p>Descrizione del prodotto 1.</p>
+            <p>Prezzo: €XX.XX</p>
+        </div>
+        <div class="product">
+            <img src="immagine2.jpg" alt="Prodotto 2">
+            <h2>Prodotto 2</h2>
+            <p>Descrizione del prodotto 2.</p>
+            <p>Prezzo: €XX.XX</p>
+        </div>
+        <div class="product">
+            <img src="immagine3.jpg" alt="Prodotto 3">
+            <h2>Prodotto 3</h2>
+            <p>Descrizione del prodotto 3.</p>
+            <p>Prezzo: €XX.XX</p>
+        </div>
+        <!-- Aggiungi più div .product per aggiungere più prodotti -->
+    </div>
+    <div id="metodi-pagamento" class="payment-options">
+        <h2>Metodi di Pagamento</h2>
+        <img src="visa.png" alt="Visa">
+        <img src="mastercard.png" alt="Mastercard">
+        <img src="paypal.png" alt="PayPal">
+        <img src="cash.png" alt="Pagamento alla Consegna">
+    </div>
+</body>
+</html>
